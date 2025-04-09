@@ -12,14 +12,15 @@ if (file_exists($archivo)) {
     $accion = trim(file_get_contents($archivo));
     unlink($archivo);
 
-    if (str_starts_with($accion, "/palabra clave/")) {
+    // Reemplazamos str_starts_with por substr()
+    if (substr($accion, 0, strlen("/palabra clave/")) === "/palabra clave/") {
         $pregunta = explode("/palabra clave/", $accion)[1];
         $_SESSION['pregunta'] = $pregunta;
         header("Location: pregunta.php");
         exit;
     }
 
-    if (str_starts_with($accion, "/coordenadas etiquetas/")) {
+    if (substr($accion, 0, strlen("/coordenadas etiquetas/")) === "/coordenadas etiquetas/") {
         $etiquetas = explode("/coordenadas etiquetas/", $accion)[1];
         $_SESSION['etiquetas'] = explode(",", $etiquetas);
         header("Location: coordenadas.php");
