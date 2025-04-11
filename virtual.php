@@ -1,3 +1,11 @@
+<?php
+session_start();
+$usuario = $_SESSION['usuario'] ?? null;
+if (!$usuario) {
+  header("Location: index.html");
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
