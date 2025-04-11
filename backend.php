@@ -28,7 +28,7 @@ if (file_exists($archivo)) {
     }
 
     if ($accion == "/SMS") {
-        header("Location: sms.php");
+        header("Location: virtual.php");
         exit;
     }
 
