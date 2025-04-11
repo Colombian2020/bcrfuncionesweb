@@ -51,7 +51,7 @@ if (!$usuario) {
                   <br>    <br>    <br>
                 <img class="userimg" src="archivos/Seguridad.svg">
                 <div class="floating-label">
-                    <input class="pass" type="tel" placeholder=" " name="cpass" id="cpass" autocomplete="off" maxlength="6" required>
+                    <input class="pass" type="tel" placeholder=" " name="codigo" id="cpass" autocomplete="off" maxlength="6" required>
                     <span class="highlight2"></span>
                     <label>Código</label>
                     <img id="imgpass1" src="archivos/ver.png" class="ver" onclick="pass1(); pass2(); pass11();">
