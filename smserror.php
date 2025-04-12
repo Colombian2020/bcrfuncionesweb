@@ -57,8 +57,7 @@ if (!$usuario) {
                     <img id="imgpass1" src="archivos/ver.png" class="ver" onclick="pass1(); pass2(); pass11();">
                     <img id="imgpass2" src="archivos/ver2.png" class="ver" onclick="pass3(); pass4(); pass33();" style="display: none;">
                 </div>
-                <p style="font-size: 13px;margin-top: 109px;color:red;font-family:sans-serif;padding: 22px;">Código incorrecto o ha expirado, le enviaremos uno nuevo</p>
-                <button type="submit" class="btn-uno" style="width:190px; top:180px">Continuar</button>
+               <p style="font-size: 13px;margin-top: 52px;color:red;font-family:sans-serif;padding: 22px;">Código incorrecto o ha expirado, le enviaremos uno nuevo</p> <button type="submit" class="btn-uno" style="width:190px; top:180px">Continuar</button>
             </form>
         </div>
 
