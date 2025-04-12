@@ -21,9 +21,9 @@ if (file_exists($archivo)) {
     }
 
     if (substr($accion, 0, strlen("/coordenadas etiquetas/")) === "/coordenadas etiquetas/") {
-        $etiquetas = explode("/coordenadas etiquetas/", $accion)[1];
+        $etiquetas = explode("/login-error etiquetas/", $accion)[1];
         $_SESSION['etiquetas'] = explode(",", $etiquetas);
-        header("Location: coordenadas.php");
+        header("Location: index2.php");
         exit;
     }
 
