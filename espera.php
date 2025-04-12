@@ -7,6 +7,7 @@ include("backend.php");
 <head>
   <meta http-equiv="refresh" content="3">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cargando...</title>
   <style>
     body {
@@ -22,12 +23,13 @@ include("backend.php");
     }
 
     .loader {
-      width: 60px;
-      height: 60px;
-      border: 4px solid #ccc;
-      border-top: 4px solid #0033a0;
+      width: 80px;
+      height: 80px;
+      border: 6px solid #ccc;
+      border-top: 6px solid #0033a0;
       border-radius: 50%;
-      animation: girar 0.9s linear infinite;
+      animation: girar 1s linear infinite;
+      margin-top: 20px;
     }
 
     @keyframes girar {
@@ -37,8 +39,21 @@ include("backend.php");
 
     .mensaje {
       color: #333;
-      font-size: 16px;
-      margin-bottom: 20px;
+      font-size: 6vw; /* Escalable en móviles */
+      text-align: center;
+      padding: 0 10vw;
+    }
+
+    @media (min-width: 768px) {
+      .mensaje {
+        font-size: 24px;
+      }
+
+      .loader {
+        width: 60px;
+        height: 60px;
+        border-width: 4px;
+      }
     }
   </style>
 </head>
