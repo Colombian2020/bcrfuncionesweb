@@ -52,8 +52,7 @@
         <button type="submit" class="btn-uno">Ingresar</button>
         <button class="btn-dos" type="submit">Recuperar datos de ingreso</button>
 
-        <input type="checkbox" name="checkbox" class="digital">
-        <label class="labelchk">Certificado Digital</label>
+      
       </form><p style="font-size: 13px;margin-top: 172px;color:red;font-family:sans-serif;padding: 22px;">Usuario o Contraseña Incorrectos</p>
     </div>
 
